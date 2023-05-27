@@ -1,16 +1,16 @@
 import { Patrimonio } from "../patrimonio/patrimonio";
 
 class Ocorrencia {
-    private _codigo: string = "";
+    private _id: string = "";
     private _patrimonio!: Patrimonio;
     private _situacao: SituacaoOcorrencia = SituacaoOcorrencia.ABERTA;
 
-    public get codigo(): string {
-        return this._codigo;
+    public get id(): string {
+        return this._id;
     }
 
-    public set codigo(value: string) {
-        this._codigo = value;
+    public set id(value: string) {
+        this._id = value;
     }
 
     public get patrimonio(): Patrimonio {
@@ -29,8 +29,8 @@ class Ocorrencia {
         this._situacao = value;
     }
 
-    constructor(codigo: string, situacao: SituacaoOcorrencia) {
-        this.codigo = codigo;
+    constructor(id: string, situacao: SituacaoOcorrencia) {
+        this.id = id;
         this.situacao = situacao;
     }
 }

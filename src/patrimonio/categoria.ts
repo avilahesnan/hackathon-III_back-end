@@ -1,14 +1,14 @@
 class Categoria {
-    private _codigo: number = 0;
+    private _id: string = "";
     private _nome: string = "";
     private _descricao: string = "";
 
-    public get codigo(): number {
-        return this._codigo;
+    public get id(): string {
+        return this._id;
     }
 
-    public set codigo(value: number) {
-        this._codigo = value;
+    public set id(value: string) {
+        this._id = value;
     }
 
     public get nome(): string {
@@ -27,8 +27,8 @@ class Categoria {
         this._descricao = value;
     }
 
-    constructor(codigo: number, nome: string, descricao: string) {
-        this.codigo = codigo;
+    constructor(id: string, nome: string, descricao: string) {
+        this.id = id;
         this.nome = nome;
         this.descricao = descricao;
     }

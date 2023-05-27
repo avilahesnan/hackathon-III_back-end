@@ -2,15 +2,15 @@ import { Empresa } from "../empresa/empresa";
 import { Setor } from "../setor/setor";
 
 class Departamento extends Empresa {
-    private _departamento: string = "";
+    private _id: string = "";
     private _setores: Setor[] = [];
 
-    public get departamento(): string {
-        return this._departamento;
+    public get id(): string {
+        return this._id;
     }
 
-    public set departamento(value: string) {
-        this._departamento = value;
+    public set id(value: string) {
+        this._id = value;
     }
 
     public get setores(): Setor[] {
@@ -24,10 +24,10 @@ class Departamento extends Empresa {
     constructor(
         nome: string,
         endereco: string,
-        departamento: string,
+        id: string,
     ) {
         super(nome, endereco);
-        this.departamento = departamento;
+        this.id = id;
     }
 
 }

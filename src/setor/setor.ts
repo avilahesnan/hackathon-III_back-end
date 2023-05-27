@@ -1,23 +1,23 @@
 import { Empresa } from "../empresa/empresa";
 
 class Setor extends Empresa {
-    private _setor: string = "";
+    private _id: string = "";
 
-    public get setor(): string {
-        return this._setor;
+    public get id(): string {
+        return this._id;
     }
     
-    public set setor(value: string) {
-        this._setor = value;
+    public set id(value: string) {
+        this._id = value;
     }
 
     constructor(
         nome: string,
         endereco: string,
-        setor: string
+        id: string
     ) {
         super(nome, endereco);
-        this.setor = setor;
+        this.id = id;
     }
 }
 export { Setor }
