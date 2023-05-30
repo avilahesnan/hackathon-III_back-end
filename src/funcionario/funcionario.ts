@@ -1,6 +1,6 @@
 import { Ocorrencia } from "../ocorrencia/ocorrencia";
 
-class Funcionario {
+export class Funcionario {
     private _id: string = "";
     private _nome: string = "";
     private _CPF: string = "";
@@ -120,4 +120,3 @@ class Funcionario {
         this.telefone = telefone;  
     }
 }
-export { Funcionario }
