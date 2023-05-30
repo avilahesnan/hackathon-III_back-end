@@ -1,7 +1,7 @@
 import { Empresa } from "../empresa/empresa";
 import { Setor } from "../setor/setor";
 
-class Departamento extends Empresa {
+export class Departamento extends Empresa {
     private _id: string = "";
     private _setores: Setor[] = [];
 
@@ -31,4 +31,3 @@ class Departamento extends Empresa {
     }
 
 }
-export { Departamento }

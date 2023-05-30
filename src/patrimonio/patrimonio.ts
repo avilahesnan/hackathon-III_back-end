@@ -1,10 +1,11 @@
 import { Categoria } from "../patrimonio/categoria";
 
-class Patrimonio {
+export class Patrimonio {
     private _id: string = "";
     private _categoria!: Categoria;
-    private _situacao: SituacaoPatrimonio = SituacaoPatrimonio.NORMAL;
-
+    private _situacao: SituacaoPatrimonio = SituacaoPatrimonio.ATIVO;
+    private _descricao: string = "";
+    
     public get id(): string {
         return this._id;
     }
@@ -29,18 +30,26 @@ class Patrimonio {
         this._situacao = value;
     }
 
-    constructor(id: string, situacao: SituacaoPatrimonio) {
+    public get descricao(): string {
+        return this._descricao;
+    }
+
+    public set descricao(value: string) {
+        this._descricao = value;
+    }
+
+    constructor(id: string, situacao: SituacaoPatrimonio, descricao: string) {
         this.id = id;
         this.situacao = situacao;
+        this.descricao = descricao;
     }
 }
 
-enum SituacaoPatrimonio {
-    NORMAL = "Normal",
+export enum SituacaoPatrimonio {
+    ATIVO = "Ativo",
     PERDIDO = "Perdido",
     ROUBADO = "Roubado",
     QUEBRADO = "Quebrado",
-    DEFEITO = "Defeito"
+    DEFEITO = "Defeito",
+    OUTRO = "Outro"
 }
-
-export { Patrimonio, SituacaoPatrimonio }

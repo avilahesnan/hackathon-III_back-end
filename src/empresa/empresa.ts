@@ -2,7 +2,7 @@ import { Funcionario } from "../funcionario/funcionario";
 import { Ocorrencia } from "../ocorrencia/ocorrencia";
 import { Patrimonio } from "../patrimonio/patrimonio";
 
-abstract class Empresa {
+export abstract class Empresa {
     private _nome: string = "";
     private _endereco: string = "";
     private _funcionarios: Funcionario[] = [];
@@ -57,4 +57,3 @@ abstract class Empresa {
         this.endereco = endereco;
     }
 }
-export { Empresa }

@@ -1,7 +1,6 @@
-class Categoria {
+export class Categoria {
     private _id: string = "";
     private _nome: string = "";
-    private _descricao: string = "";
 
     public get id(): string {
         return this._id;
@@ -19,18 +18,8 @@ class Categoria {
         this._nome = value;
     }
 
-    public get descricao(): string {
-        return this._descricao;
-    }
-
-    public set descricao(value: string) {
-        this._descricao = value;
-    }
-
-    constructor(id: string, nome: string, descricao: string) {
+    constructor(id: string, nome: string) {
         this.id = id;
         this.nome = nome;
-        this.descricao = descricao;
     }
 }
-export { Categoria }

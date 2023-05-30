@@ -4,10 +4,12 @@ class Funcionario {
     private _id: string = "";
     private _nome: string = "";
     private _CPF: string = "";
-    private _enderecos: string[] = [];
-    private _chefe: boolean = false;
-    private _telefones: string[] = [];
     private _salario: number = 0;
+    private _chefe: boolean = false;
+    private _email: string = "";
+    private _senha: string = "";
+    private _endereco: string = "";
+    private _telefone: string = "";
     private _ocorrencias: Ocorrencia[] = [];
 
     public get id(): string {
@@ -40,12 +42,12 @@ class Funcionario {
 		}
     }
 
-    public get enderecos(): string[] {
-        return this._enderecos;
+    public get salario(): number {
+        return this._salario;
     }
 
-    public set enderecos(value: string[]) {
-        this._enderecos = value;
+    public set salario(value: number) {
+        this._salario = value;
     }
 
     public get chefe(): boolean {
@@ -56,20 +58,36 @@ class Funcionario {
         this._chefe = value;
     }
 
-    public get telefones(): string[] {
-        return this._telefones;
+    public get email(): string {
+        return this._email;
     }
 
-    public set telefones(value: string[]) {
-        this._telefones = value;
+    public set email(value: string) {
+        this._email = value;
     }
 
-    public get salario(): number {
-        return this._salario;
+    public get senha(): string {
+        return this._senha;
     }
 
-    public set salario(value: number) {
-        this._salario = value;
+    public set senha(value: string) {
+        this._senha = value;
+    }
+
+    public get endereco(): string {
+        return this._endereco;
+    }
+
+    public set endereco(value: string) {
+        this._endereco = value;
+    }
+
+    public get telefone(): string {
+        return this._telefone;
+    }
+
+    public set telefone(value: string) {
+        this._telefone = value;
     }
 
     public get ocorrencias(): Ocorrencia[] {
@@ -84,18 +102,22 @@ class Funcionario {
         id: string,
         nome: string,
         CPF: string,
-        enderecos: string[],
-        chefe: boolean,
-        telefones: string[],
         salario: number,
+        chefe: boolean,
+        email: string,
+        senha: string,
+        endereco: string,
+        telefone: string
     ) {
         this.id = id;
         this.nome = nome;
         this.CPF = CPF;
-        this.enderecos = enderecos;
-        this.chefe = chefe;
-        this.telefones = telefones;
         this.salario = salario;
+        this.chefe = chefe;
+        this.email = email;
+        this.senha = senha;
+        this.endereco = endereco;
+        this.telefone = telefone;  
     }
 }
 export { Funcionario }
