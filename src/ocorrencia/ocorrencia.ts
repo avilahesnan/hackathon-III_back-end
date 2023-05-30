@@ -43,6 +43,7 @@ export class Ocorrencia {
     public get descricao(): string {
         return this._descricao;
     }
+    
     public set descricao(value: string) {
         this._descricao = value;
     }
