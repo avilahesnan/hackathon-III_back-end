@@ -60,6 +60,7 @@ export class Ocorrencia {
         this.descricao = descricao;
     }
 }
+
 export enum StatusOcorrencia {
     ABERTA = "Aberta",
     ATENDIMENTO = "Atendimento",
