@@ -29,5 +29,5 @@ export class Setor extends Empresa {
         super(nome, endereco);
         this.id = id;
         this.direcao = direcao;
-    }
+    }   
 }

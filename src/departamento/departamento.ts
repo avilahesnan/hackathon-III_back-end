@@ -29,5 +29,4 @@ export class Departamento extends Empresa {
         super(nome, endereco);
         this.id = id;
     }
-
 }
