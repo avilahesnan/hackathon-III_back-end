@@ -3,6 +3,7 @@ import { Categoria } from "../patrimonio/categoria";
 export class Patrimonio {
     private _id: string = "";
     private _categoria!: Categoria;
+    private _nome: string = "";
     private _situacao: SituacaoPatrimonio = SituacaoPatrimonio.ATIVO;
     private _descricao: string = "";
     
@@ -22,6 +23,14 @@ export class Patrimonio {
         this._categoria = value;
     }
 
+    public get nome(): string {
+        return this._nome;
+    }
+
+    public set nome(value: string) {
+        this._nome = value;
+    }
+
     public get situacao(): SituacaoPatrimonio {
         return this._situacao;
     }
@@ -38,8 +47,9 @@ export class Patrimonio {
         this._descricao = value;
     }
 
-    constructor(id: string, situacao: SituacaoPatrimonio, descricao: string) {
+    constructor(id: string, nome: string, situacao: SituacaoPatrimonio, descricao: string) {
         this.id = id;
+        this.nome = nome;
         this.situacao = situacao;
         this.descricao = descricao;
     }
